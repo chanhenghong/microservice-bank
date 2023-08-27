@@ -2,7 +2,7 @@
 FROM openjdk:17 as build
 
 #Information of owner or maintainer of image
-MAINTAINER chanhengbank
+MAINTAINER chanhenghong
 
 #Add the application's jar to the container
 COPY target/account-0.0.1-SNAPSHOT.jar account-0.0.1-SNAPSHOT.jar
@@ -11,5 +11,5 @@ COPY target/account-0.0.1-SNAPSHOT.jar account-0.0.1-SNAPSHOT.jar
 ENTRYPOINT ["java", "-jar", "/account-0.0.1-SNAPSHOT.jar"]
 
 #	- mvn clean package
-#   - docker build . -t chanheng/bank
-#	- docker run -p 8080:8080 chanheng/bank
+#   - docker build . -t chanhenghong/account
+#	- docker run -p [8080:8080 port] chanhenghong/account
